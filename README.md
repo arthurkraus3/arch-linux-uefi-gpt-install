@@ -25,11 +25,14 @@ IN BIOS: ENABLE INTEL VIRTUAL TECHNOLOGY BUT NOT THE VT-D
 
 ##### Format your drives
 > mkfs.vfat /dev/sda1 (Don't have to but I did)
+
 > mkfs.ext4 /dev/sda2
 
 ##### Mounting
 >mount /dev/sda2 /mnt
+
 >mkdir /mnt/boot
+
 >mount /dev/sda1 /mnt/boot
 
 ##### Pacstrap
