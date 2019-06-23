@@ -5,7 +5,6 @@ Thinkpad X1 Yoga 1st Gen
 IN BIOS: ENABLE INTEL VIRTUAL TECHNOLOGY BUT NOT THE VT-D 
 
 
-===========================================================================================
 #### connect to internet using wifi-menu or just verifying that ping archlinux.org works
 
 ##### Get your mirror list setup with local priority
@@ -13,10 +12,15 @@ IN BIOS: ENABLE INTEL VIRTUAL TECHNOLOGY BUT NOT THE VT-D
 
 ##### Use gdisk to partition the drive
 > gdisk /dev/sda
+
 > o 
+
 > n <blank> <blank> +512MB<enter> EF00<enter>
+	
 > n <blank>*4
+	
 > w
+
 > y
 
 ##### Format your drives
@@ -40,17 +44,21 @@ IN BIOS: ENABLE INTEL VIRTUAL TECHNOLOGY BUT NOT THE VT-D
 >cd /boot
 ##### if vmlinuz-linux is there then proceed to next step (if not troubleshoot why it's not)
   >cd loader
+  
   >pacman -S nano
 
 
 ##### Loader.conf
 >nano loader.conf
+
   > default arch
+  
   > timeout 4
 
 
 ##### Entries 
 >cd entries 
+
 	>nano arch.conf
 	"
 		title Arch Linux
@@ -60,7 +68,9 @@ IN BIOS: ENABLE INTEL VIRTUAL TECHNOLOGY BUT NOT THE VT-D
 	"
 
 > exit
+
 > umount -R /mnt
+
 > reboot
 
 #### after you boot into the system you'll want to set up all the essentials, such as the passwords and other such things
